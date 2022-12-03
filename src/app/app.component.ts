@@ -13,6 +13,10 @@ export class AppComponent {
   ngOnInit(){
     this.appService.getData().subscribe((response)=>{
       console.warn(response);
+    },(error)=>{});
+
+    this.appService.getData().subscribe((response)=>{
+      console.warn(response);
     },(error)=>{})
   }
 }
