@@ -41,4 +41,8 @@ describe('AppService', () => {
       payload: { name: 'saif' },
     });
   });
+
+  afterEach(()=>{
+    HttpController.verify();
+  });
 });
