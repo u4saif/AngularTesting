@@ -13,4 +13,8 @@ describe('AppService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should add two numbers',()=>{
+    expect(service.addNumber(4,3)).toEqual(7);
+  });
 });
