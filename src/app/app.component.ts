@@ -1,3 +1,4 @@
+import { AppService } from './../services/app.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Welcome to Angular Testing';
+
+  constructor(private appService:AppService){}
+  ngOnInit(){
+    this.appService.getData().subscribe((response)=>{
+      console.warn(response);
+    },(error)=>{})
+  }
 }
