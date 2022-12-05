@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Welcome to Angular Testing';
-
   constructor(private appService:AppService){}
   ngOnInit(){
     this.appService.getData().subscribe((response)=>{

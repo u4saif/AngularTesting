@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { DebugElement } from '@angular/core';
 
 describe('AppComponent', () => {
+  let el:DebugElement;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
@@ -22,6 +24,11 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('Welcome to Angular Testing');
+    fixture.detectChanges();
+    el=fixture.debugElement;
+    console.log(el);
+    console.warn(el.nativeElement);
+    expect(el.nativeElement.textContent).toBeTruthy();
   });
 
 });
