@@ -15,7 +15,7 @@ export class AppComponent {
       console.warn(response);
     },(error)=>{});
 
-    this.appService.getData().subscribe((response)=>{
+    this.appService.failedGetData().subscribe((response)=>{
       console.warn(response);
     },(error)=>{})
   }

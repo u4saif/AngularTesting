@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AppService {
-  URL='https://ap.unsplash.com/photos?page=1&query=random&client_id=Wodf-s3S_rzzMqYGrFLhqunWZMOEDAqvSqX3Gci6DVM';
+  URL='https://api.unsplash.com/photos?page=1&query=random&client_id=Wodf-s3S_rzzMqYGrFLhqunWZMOEDAqvSqX3Gci6DVM';
   constructor(private http:HttpClient) { }
 
   addNumber(n,m){
@@ -14,6 +14,10 @@ export class AppService {
 
   getData(){
     return this.http.get(this.URL);
+  }
+
+  failedGetData(){
+    return this.http.get('https://unsplash.com/photos?page=1&query=random&client_id=Wodf-s3S_rzzMqYGrFLhqunWZMOEDAqvSqX3Gci6DV');
   }
 
 }
