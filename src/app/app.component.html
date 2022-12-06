@@ -1,3 +1,10 @@
-<h2 class="test" style="text-align: center;background-color: cornflowerblue; height: 100vh;">
+<h2 class="test" style="text-align: center;background-color: cornflowerblue;">
     {{title}}
 </h2>
+
+<div class="cardContainer" >
+    <div class="card" *ngFor="let card of cardData">
+        <h3>{{card.user.name}}</h3>
+        <img src="{{card.urls.regular}}" alt="cardImage" >
+    </div>
+</div>

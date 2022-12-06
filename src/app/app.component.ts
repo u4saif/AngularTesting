@@ -8,14 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Welcome to Angular Testing';
+  cardData:any;
   constructor(private appService:AppService){}
   ngOnInit(){
     this.appService.getData().subscribe((response)=>{
       console.warn(response);
-    },(error)=>{});
+      this.cardData=response;
+    },
+    (error)=>{});
 
     this.appService.failedGetData().subscribe((response)=>{
-      console.warn(response);
-    },(error)=>{})
+    },(error)=>{
+      console.warn(error);
+    })
   }
 }
