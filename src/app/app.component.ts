@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title2 = 'Welcome to Angular Testing';
+  title = 'Welcome to Angular Testing';
   cardData:any;
   constructor(private appService:AppService){}
   ngOnInit(){
