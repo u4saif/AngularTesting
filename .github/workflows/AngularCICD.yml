@@ -1,6 +1,5 @@
 name: Angular GitHub CI
-on:
-  push:
+on: [push, pull_request]
     branches:
       - master
 
